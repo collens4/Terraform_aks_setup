@@ -1,29 +1,16 @@
+# Define variables
 variable "resource_group_name" {
-  type        = string
-  description = "RG name in Azure"
+  default = "my-resource-group"
 }
 
 variable "location" {
-  type        = string
-  description = "Resources location in Azure"
+  default = "East US"
 }
 
-variable "cluster_name" {
-  type        = string
-  description = "AKS name in Azure"
+variable "aks_cluster_name" {
+  default = "my-aks-cluster"
 }
 
-variable "kubernetes_version" {
-  type        = string
-  description = "Kubernetes version"
-}
-
-variable "system_node_count" {
-  type        = number
-  description = "Number of AKS worker nodes"
-}
-
-variable "node_resource_group" {
-  type        = string
-  description = "RG name for cluster resources in Azure"
+variable "aks_node_count" {
+  default = 3
 }
